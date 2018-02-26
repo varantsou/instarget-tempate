@@ -1,0 +1,1238 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: #5a5f70
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.error
+	color: red
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+h1
+	font-weight: bold
+	font-size: 45px
+	line-height: 1.2
+	color: #444444
+	margin-bottom: 40px
+
+h2
+	font-weight: bold
+	font-size: 45px
+	line-height: 1.2
+	color: #282828
+	margin-bottom: 75px
+
+h4
+	font-size: 20px
+	font-weight: bold
+	color: #5a5f70
+	margin-bottom: 16px
+
+a
+	text-decoration: none
+
+ul
+	list-style: none
+
+
+input,
+input:hover,
+input:focus
+	outline: none
+
+.reverse-icon-color
+	fill: $theme-color
+
+.icon-color-white
+	stroke: #ffffff
+	stroke-width: 2
+
+.btn
+	min-width: 190px
+	height: 60px
+	line-height: 58px
+	text-align: center
+	background-color: $theme-color
+	border: 1px solid $theme-color
+	font-size: 15px
+	padding: 0 30px
+	border-radius: 30px
+	color: #ffffff
+	outline: none
+	cursor: pointer
+
+	&:hover,
+	&:focus
+		border: 1px solid $theme-color
+		color: $theme-color
+		background-color: transparent
+		outline: none
+		box-shadow: none
+
+	&.revers
+		border: 1px solid $theme-color
+		color: $theme-color
+		background-color: #ffffff
+		&:hover
+			border: 1px solid #ffffff
+			color: #ffffff
+			background-color: $theme-color
+
+.default-name
+	font-size: 20px
+	line-height: 1.2
+	font-weight: bold
+	color: #5a5f70
+	margin-bottom: 14px
+
+.default-description
+	font-size: 14px
+	line-height: 1.4
+	color: #5a5f70
+
+.default-number
+	color: #267df4
+	font-size: 45px
+	line-height: 45px
+	font-weight: bold
+
+.half
+	width: 50%
+	display: inline-block
+	padding: 0 15px
+	vertical-align: top
+
+.block
+	display: block
+	width: 100%
+
+
+
+// Start magnific
+
+.mfp-bg
+	opacity: .4
+
+.mfp-close
+	display: none!important
+
+@media (max-width: 767px)
+	.mfp-close
+		display: block!important
+
+// End magnific
+
+
+@media (max-width: 991px)
+	body
+		font-size: 15px
+
+	.btn
+		height: 55px
+		line-height: 55px
+
+	h1
+		font-size: 40px
+
+	h2
+		font-size: 36px
+		margin-bottom: 45px
+
+@media (max-width: 767px)
+	h1
+		font-size: 36px
+	h2
+		font-size: 32px
+
+// START HEADER
+
+.header
+	padding: 30px 0 22px
+	position: absolute
+	width: 100%
+	left: 0
+	top: 0
+	z-index: 9
+
+.logo
+	font-size: 20px
+	font-weight: bold
+	color: #202d42
+	a
+		color: #202d42
+		text-decoration: none
+		-webkit-user-select: none
+	     -moz-user-select: none
+	     -ms-user-select: none
+	.color-site
+		color: $theme-color
+
+.lang-swich
+	display: inline-block
+	font-size: 16px
+	color: #5a5f70
+	position: relative
+	margin-right: 10px
+
+	.lang-swich__item
+		cursor: pointer
+		padding: 5px 25px 0 15px
+		// background: #eff1ff
+		position: relative
+
+		&.selected
+			border-radius: 10px 10px 0 0
+			margin-bottom: 3px
+			&:before
+				content: ''
+				position: absolute
+				top: 5px
+				bottom: 0
+				right: 8px
+				margin: auto
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 5px 5px 0 5px
+				border-color: $theme-color transparent transparent transparent
+				display: none
+
+	.lang-swich__list
+		display: none
+		position: absolute
+		width: 100%
+		top: 34px
+		left: 0
+		background: #eff1ff
+		padding: 5px 0 2px
+		border-radius: 0 0 10px 10px
+
+		.lang-swich__item
+			margin-bottom: 5px
+			background: transparent
+			color: rgba(38, 125, 244, .5)
+	&:hover
+		.lang-swich__item
+			background: #eff1ff
+			color: rgba(38, 125, 244, 1)
+			&:before
+				display: block
+
+		.lang-swich__list
+			display: block
+			.lang-swich__item
+				color: rgba(38, 125, 244, .5)
+				&:hover
+					color: rgba(38, 125, 244, 1)
+
+.panel-control
+	text-align: right
+
+.mm-control
+	display: inline-block
+
+.menu
+	padding: 0
+	margin: 0
+	text-align: right
+	display: inline-block
+	.menu__item
+		display: inline-block
+		margin-left: 30px
+		&:first-child
+			margin-left: 0
+		.menu__link
+			// font-size: 16px
+			color: #5a5f70
+
+.registration
+	cursor: pointer
+	color: #267df4
+	border: none
+	background-color: #f3f4fc
+	border-radius: 20px
+	height: 45px
+	line-height: 45px
+	padding: 0 40px
+	display: inline-block
+	margin-left: 30px
+
+
+.registration:hover,
+.registration:focus
+	outline: none
+	text-decoration: none
+
+
+
+@media (max-width:991px)
+	.menu
+		.menu__item
+			margin-left: 15px
+
+	.registration
+		padding: 0 20px
+
+@media (max-width: 767px)
+	.header
+		padding: 15px 0
+		position: fixed
+    		background: #ffffff
+		z-index: 3
+
+	.logo
+		text-align: center
+		font-size: 18px
+
+	.mm-control
+		position: fixed
+		left: -100%
+		background: #f8f9fa
+		top: 62px
+		padding: 15px 30px
+		transition: left .4s
+	.menu
+		display: block
+		width: 100%
+		text-align: left
+		.menu__item
+			display: block
+			margin: 0 0 5px 0
+	.registration
+	    color: #267df4
+	    background-color: transparent
+	    border-radius: 0
+	    height: auto
+	    line-height: inherit
+	    padding: 0
+	    display: block
+	    margin-left: 0
+	    text-align: left
+	    color: #5a5f70
+	    &:hover
+		    background-color: transparent
+
+	.lang-swich
+		margin-right: 0
+		font-size: 14px
+		.lang-swich__list
+			top: 30px
+
+	.show-hide-menu
+		margin-top: 5px
+		cursor: pointer
+
+		.show-hide-menu__line
+			width: 30px
+			height: 3px
+			background-color: $theme-color
+			margin-bottom: 3px
+
+	.scrollPage
+		.header
+			background: #f8f9fa
+
+	.open-menu
+		.header
+			background: #f8f9fa
+		.mm-control
+			left: 0
+
+		.show-hide-menu
+			.show-hide-menu__line
+				&:nth-child(1)
+					transform: rotate(45deg) translateX(5px) translateY(5px)
+				&:nth-child(2)
+					opacity: 0
+				&:nth-child(3)
+					transform: rotate(-45deg) translateX(4px) translateY(-3px)
+
+// END HEADER
+
+
+// START TOP-BLOCK
+
+.top-block
+	background-position: center
+	background-size: cover
+	height: 665px
+	padding: 205px 0 140px
+
+
+.iBlock
+	.iBlock__description
+		font-size: 15px
+		line-height: 22px
+		color: #282828
+		margin-bottom: 63px
+
+@media (min-width: 768px) and (max-width: 991px)
+	.top-block
+		height: auto
+		min-height: 600px
+		padding: 160px 0 140px
+
+@media (max-width:767px)
+
+	.top-block
+		padding: 120px 0 50px
+		height: auto
+
+	.iBlock
+		.iBlock__description
+			display: none
+
+// END TOP-BLOCK
+
+// START SERVICES
+
+.services
+	padding: 95px 0 45px
+
+.statistic
+	margin-bottom: 125px
+
+.scatistic-item
+	height: 122px
+	position: relative
+	margin-bottom: 52px
+	.scatistic-item__icon
+		img
+			height: 120px
+	.scatistic-item__text
+		position: absolute
+		top: 40px
+		left: 0
+		padding-left: 50px
+		height: 100%
+	.scatistic-item__count
+		white-space: nowrap
+		margin-bottom: 13px
+
+	.scatistic-item__desc
+		color: #5a5f70
+		margin-bottom: 0
+		white-space: nowrap
+		line-height: 1.2
+
+.page
+	.row
+		margin-bottom: 70px
+	.page-info
+		padding-top: 65px
+	.page-desc
+		color: #282828
+		margin-bottom: 35px
+	.page-info__img
+		margin: 0 -110px 0 0
+		text-align: right
+		img
+			display: inline-block
+	.row:last-child
+		margin-bottom: 0
+	.row:nth-child(even)
+		.page-info__img
+			margin: 0 0 0 -110px
+			text-align: left
+
+@media (max-width:1380px)
+	.page
+		.page-info__img
+			margin: 0
+		.row:nth-child(even)
+			.page-info__img
+				margin: 0
+
+@media (max-width:1199px)
+	.scatistic-item
+		.scatistic-item__count
+			font-size: 40px
+
+@media (max-width:991px)
+	.page
+		.page-info
+			padding-top: 25px
+
+	.statistic
+    		margin-bottom: 75px
+
+@media (max-width:767px)
+	.services
+		padding: 65px 0 45px
+	.statistic
+		margin-bottom: 45px
+
+// END SERVICES
+
+
+// START CAPABILITIES
+
+.capabilities
+	padding: 70px 0
+
+.opportunity
+	margin-bottom: 45px
+	.opportunity__icon
+		margin-bottom: 20px
+		.icon-color
+			stroke: $theme-color
+			fill: none
+			stroke-width: 2
+		svg
+			height: 56px
+	.opportunity__name
+
+	.opportunity__description
+
+@media (max-width:991px)
+	.capabilities
+		padding: 70px 0 35px
+
+@media (max-width:767px)
+	.capabilities
+		padding: 35px 0 35px
+
+// END CAPABILITIES
+
+// START HOW IT WORKS
+
+.how-it-works
+	padding: 25px 0 55px
+
+.step-work
+	.step-work__label
+		height: 40px
+		width: 40px
+		border-radius: 50%
+		overflow: hidden
+		position: absolute
+		top: 0
+		right: 0
+		background: $theme-color
+		text-align: center
+		line-height: 36px
+
+	.step-work__img
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		background-color: #a2a2a2
+
+		margin-bottom: 45px
+		position: relative
+		> img
+			border-radius: 50%
+			overflow: hidden
+		&.has-img
+			background-color: transparent
+
+	.step-work__name
+		position: relative
+		padding-left: 45px
+		margin-bottom: 35px
+
+	.number
+		position: absolute
+		left: 0
+		top: 0
+		font-size: 58px
+
+@media (max-width:991px)
+	.how-it-works
+		padding: 25px 0
+
+@media (max-width:767px)
+
+	.step-work
+		margin-bottom: 35px
+		.step-work__img
+			margin-bottom: 25px
+
+
+// END HOW IT WORKS
+
+
+// START FOR WROM
+
+.for-whom
+	padding: 55px 0
+
+.for-whom-item
+	margin-bottom: 45px
+
+@media (max-width:767px)
+	.for-whom
+		padding: 25px 0
+
+// END FOR WROM
+
+
+// START CASES
+
+.cases
+	padding: 75px 0
+
+.list-of-cases
+	box-shadow: 0 5px 15px 10px rgba(245,245,245,.8)
+
+.item-left
+	padding-right: 0
+
+.item
+	.item__img-block
+	.item__info
+		padding: 30px 0 20px 20px
+	.item__name
+		margin-bottom: 45px
+		padding-right: 100px
+
+	.column
+		width: 60%
+		float: left
+		padding: 0 10px 0 45px
+		font-size: 0
+		vertical-align: top
+		&.left-column
+			width: 40%
+			border-right: 1px solid #d0d0d0
+			padding: 0 20px 0 0
+
+.block-parametrs
+	color: #5a5f70
+
+	.name
+		font-size: 16px
+		line-height: 1.2
+		font-weight: bold
+		color: #5a5f70
+		margin-bottom: 14px
+
+	.parametr
+		margin-bottom: 5px
+		font-size: 14px
+		>div
+			float: left
+		.parametr__name
+			width: 100px
+	&:last-child
+		margin-bottom: 0
+
+	&.parametrs-top
+		min-height: 140px
+		margin-bottom: 37px
+
+.block-btn
+	padding: 0 15px
+
+
+@media (max-width:991px)
+
+	.cases
+		padding: 50px 0
+
+	.item-left
+		display: none
+
+@media (max-width:767px)
+	.parametrs-top
+		min-height: auto!important
+
+	.item
+		.column
+			width: 100%
+			float: none
+			padding-left: 0
+			padding-right: 0
+			&.left-column
+				width: 100%
+				float: none
+				border: none
+				padding-left: 0
+				padding-right: 0
+			.half
+				padding: 0
+				width: 100%
+				display: block
+				float: none
+// END CASES
+
+// START REVIEWS
+
+.reviews
+	padding: 90px 0
+
+.reviews-list
+	margin: 0 -20px
+
+.reviews-item
+	width: 33.3%
+	padding: 0 20px
+	float: left
+
+	.reviews-item__desctiption
+		position: relative
+		padding-top: 25px
+		margin-bottom: 40px
+
+		&:before
+			content: '“'
+			position: absolute
+			top: -18px
+			font-size: 48px
+			font-weight: bold
+			color: #5a5f70
+
+
+.user
+	position: relative
+	padding-left: 105px
+	min-height: 90px
+	display: flex
+	align-items: center
+	.user__photo
+		width: 90px
+		height: 90px
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
+		img
+			max-width: 100%
+
+@media (max-width:991px)
+
+	.reviews
+    		padding: 50px 0
+
+	.reviews-item
+		.reviews-item__desctiption
+			height: auto!important
+
+
+// END REVIEWS
+
+
+// START PRICE-LIST
+
+.price-list
+	padding: 110px 0 110px
+
+.price-block-wrapper
+	text-align: center
+
+.price-block
+	display: inline-block
+	width: 370px
+	padding: 67px 20px 75px
+	margin: 15px 20px
+	// box-shadow: 0 10px 25px 20px rgba(245,245,245,.6)
+	.price-block__name
+		margin-bottom: 25px
+
+	.price-block__price
+		font-size: 50px
+
+	.price-block__validity
+		margin-bottom: 60px
+
+	.price-block__desc
+		margin-bottom: 55px
+
+	.price-block__desc-item
+		display: inline-block
+		padding-left: 35px
+		background-image: url(../img/icon/yes-icon.png)
+		background-repeat: no-repeat
+		background-position: 0 8px
+		margin-bottom: 12px
+
+	.btn
+		min-width: 250px
+		border: 1px solid $theme-color
+		background: #ffffff
+		color: $theme-color
+	&:hover
+		box-shadow: 0 10px 25px 20px rgba(245,245,245,.6)
+		.btn
+			border: 1px solid #ffffff
+			background: $theme-color
+			color: #ffffff
+
+@media (max-width:991px)
+
+	.price-list
+		padding: 70px 0 50px
+
+	.price-block
+	    width: 320px
+	    margin: 15px 0px
+
+@media (max-width:767px)
+	.price-block
+		width: 100%
+		.price-block__desc-item
+			display: block
+			text-align: left
+		.btn
+			min-width: auto
+
+// END PRICE-LIST
+
+// START FOOTER
+
+.footer
+	background-color: $theme-color
+
+	.footer-top
+		padding: 35px 0
+
+	.logo
+		color: #ffffff
+		a
+			color: #ffffff
+
+.bottom-menu
+	margin-bottom: 0
+	.bottom-menu__item
+		float: left
+		margin-right: 40px
+		&:last-child
+			margin-right: 0
+	.bottom-menu__item
+		&:hover
+			text-decoration: underline
+	.bottom-menu__link,
+	.bottom-menu__item
+		color: #ffffff
+		text-decoration: none
+
+
+.social-block
+	text-align: right
+	.social
+		display: inline-block
+		margin-left: 5px
+		// height: 16px
+		width: 25px
+		svg
+			fill: #ffffff
+			position: relative
+
+.footer-bottom
+	color: #eff1ff
+	background-color: #36353f
+	padding: 21px 0
+	.simple-page
+		text-align: right
+
+		.simple-page__link
+			display: inline-block
+			color: #eff1ff
+			font-size: 14px
+			text-decoration: none
+			margin-left: 40px
+			&:hover
+				text-decoration: underline
+				color: #ffffff
+
+
+
+.slick-arrow
+	background-image: url(../img/icon/arrow-prev.png)
+	background-position: center
+	background-repeat: no-repeat
+	width: 15px
+	height: 20px
+	position: absolute
+	top: 32px
+	right: 60px
+	border: none
+	background-color: transparent
+	outline: none!important
+	cursor: pointer
+	z-index: 3
+	&:hover
+		background-image: url(../img/icon/arrow-active.png)
+
+	&.slick-prev
+		top: 33px
+		right: 25px
+		transform: rotate(180deg)
+		&:hover
+			background-image: url(../img/icon/arrow-active.png)
+
+
+@media (max-width:1199px)
+	.bottom-menu
+		padding-left: 20px
+
+		.bottom-menu__item
+			margin-right: 30px
+
+@media(max-width:767px)
+	.footer
+		.logo
+			text-align: left
+			margin-bottom: 20px
+	.bottom-menu
+		padding-left: 0
+		margin-bottom: 15px
+
+		.bottom-menu__item
+			float: none
+			width: 100%
+			margin: 0 0 5px 0
+	.social-block
+		text-align: left
+		.social
+			margin: 0 15px 0 0
+
+	.footer-bottom
+		.simple-page
+			text-align: left
+			.simple-page__link
+				margin-left: 0
+
+// END FOOTER
+
+
+// START DIALOG
+
+
+.input-text
+	display: block
+	width: 100%
+	color: #444444
+	line-height: 30px
+	border: none
+	border-bottom: 1px solid #aaaaaa
+	font-size: 14px
+	outline: none
+	&.full-border
+		border: 1px solid #aaaaaa
+		border-radius: 5px
+		padding: 0 20px
+		line-height: 34px
+
+	&.small
+		font-size: 80%
+
+.input-label
+	margin-bottom: 5px
+	font-size: 16px
+
+	&.small
+		font-size: 80%
+
+select
+	font-size: 14px
+	border-bottom: 1px solid #aaaaaa
+	border-radius: 5px
+	display: block
+	width: 100%
+	outline: none
+	padding: 5px 35px 5px 20px
+	color: #444444
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	background-image: url(../img/icon/caret-icon.png)
+	background-repeat: no-repeat
+	background-position: 96% 12px
+	margin-top: 5px
+	line-height: 24px
+
+.popup-window
+	width: 100%
+	max-width: 890px
+	background: #ffffff
+	box-shadow: 0 0 25px 0px rgba(0,0,0,.1)
+	color: #444444
+	font-size: 15px
+	margin: 30px auto
+	position: relative
+	// position: absolute
+	// left: 0
+	// right: 0
+	// top: 50px
+
+	.column
+		width: 50%
+		float: left
+
+.form-description
+	font-size: 12px
+	line-height: 20px
+	color: #444444
+	padding: 25px 50px 25px 75px
+	border-bottom: 1px solid #e4e4ea
+
+.img-card-example
+	margin-top: 18px
+
+.payment-methods
+	font-size: 12px
+	line-height: 20px
+	color: #444444
+	padding: 25px 50px 25px 75px
+	border-bottom: 1px solid #e4e4ea
+
+	.payment-methods__text
+		margin: 0
+		padding: 8px 0 5px
+
+	.pay-icon
+		height: 36px
+
+
+.form-header__step
+	padding: 20px
+	width: 33.3%
+	float: left
+	font-size: 15px
+	color: #e4e4ea
+	line-height: 30px
+	border-bottom: 1px solid #e4e4ea
+
+	.f-step-number
+		display: inline-block
+		border: 1px solid #e4e4ea
+		width: 30px
+		height: 30px
+		line-height: 28px
+		border-radius: 50%
+		text-align: center
+		margin-right: 20px
+
+	&.active
+		color: $theme-color
+		border-bottom: 1px solid $theme-color
+
+		.f-step-number
+			border: 1px solid $theme-color
+
+
+.field-row
+	text-align: center
+
+.field-input
+	margin: 0 10px 10px
+	display: inline-block
+	width: 260px
+	text-align: left
+
+	&.small
+		width: 120px
+
+	&.error
+		label
+			color: red
+		input
+			border-color: red
+			color: red
+
+
+.form-footer
+	text-align: center
+	padding: 30px 20px
+	.btn
+		height: 50px
+		line-height: 48px
+		min-width: 210px
+
+.form-first-step
+	.fields-content
+		padding: 90px 20px 30px
+
+	.field-input
+		margin: 0 40px 50px
+
+.form-second-step
+	.fields-content
+		padding: 45px 20px 20px 20px
+	.field-input
+		margin: 0 40px 20px
+	.input-label
+		margin-bottom: 9px
+
+.form-therd-step
+	.fields-content
+		padding: 20px 20px 0 20px
+	.field-input
+		margin: 0 40px 10px 0
+		&.small
+			&:first-child
+				margin: 0 10px 10px 0
+			&:last-child
+				margin: 0 40px 10px 10px
+
+
+@media (max-width:767px)
+
+	.popup-window
+		.column
+			width: 100%
+			float: none
+
+	.form-header__step
+		text-align: center
+		font-size: 14px
+		line-height: 18px
+		height: 107px
+		.f-step-number
+			width: 25px
+			height: 25px
+			line-height: 23px
+			font-size: 14px
+			display: block
+			margin: 0 auto 5px
+
+	.form-first-step
+		.fields-content
+			padding: 30px 20px 15px
+		.field-input
+			margin: 0 0 30px
+			width: 100%
+
+	.form-second-step
+		.field-input
+			margin: 0 0 20px 0
+			width: 100%
+
+	.form-therd-step
+		.field-input
+			margin: 0 0 20px 0
+			width: 100%
+			&.small:last-child
+				margin: 0 0 20px 0
+
+	.form-description
+	    padding: 25px 20px 25px 25px
+
+
+	.payment-methods
+		padding: 25px 20px 25px 25px
+
+
+// END DIALOG
+
+
+// START REGISTRATION WINDOW
+
+.registration-window
+	max-width: 540px
+	padding: 45px 115px 45px
+
+	.form-or
+	    margin: 45px 0 45px
+	    background: #878787
+	    height: 1px
+	    position: relative
+
+	    .form-or__title
+		    position: absolute
+		    display: inline-block
+		    background-color: #fff
+		    top: -12px
+		    left: 0
+		    right: 0
+		    margin: auto
+		    width: 80px
+		    text-align: center
+
+	h4
+		text-align: center
+
+	.name
+		text-align: center
+		margin-bottom: 45px
+
+	.field-row.last
+		.field-input
+			margin-bottom: 35px
+
+	.field-input
+		width: 100%
+		margin:  0 0 15px 0
+
+	.btn
+		// margin-top: 30px
+		min-width: 100%
+		height: 50px
+		line-height: 48px
+
+.restore-password
+	display: block
+	text-align: center
+	color: #444
+	margin-top: 5px
+
+.error-field
+	margin: 15px 0
+	min-height: 19px
+
+.restore-window
+	max-width: 380px
+	padding: 45px 65px 45px
+	.name
+		margin-bottom: 25px
+
+
+@media (max-width:767px)
+	.registration-window
+		padding: 30px 20px
+
+// END REGISTRATION WINDOW
